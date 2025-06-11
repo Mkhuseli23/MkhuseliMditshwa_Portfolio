@@ -9,17 +9,17 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  
-  .container {
+}
+
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  /* Sidebar Styles */
-  .sidebar {
+}
+
+/* Sidebar Styles */
+.sidebar {
     width: 250px;
     background: linear-gradient(135deg, #0b3941, #20b4ce);
     color: white;
@@ -31,9 +31,10 @@ body {
     z-index: 999;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .sidebar img {
+    overflow-y: auto; /* Added to allow scrolling if content overflows */
+}
+
+.sidebar img {
     width: 160px;
     height: 160px;
     display: block;
@@ -42,23 +43,23 @@ body {
     object-fit: cover;
     transition: transform 0.3s ease;
     border: 4px solid #fff;
-  }
-  
-  .sidebar img:hover {
+}
+
+.sidebar img:hover {
     transform: scale(1.1);
-  }
-  
-  .sidebar ul {
+}
+
+.sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .sidebar ul li {
+}
+
+.sidebar ul li {
     margin: 20px 0;
-  }
-  
-  .sidebar ul li a {
+}
+
+.sidebar ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -66,22 +67,22 @@ body {
     align-items: center;
     gap: 10px;
     transition: color 0.3s ease;
-  }
-  
-  .sidebar ul li a:hover {
+}
+
+.sidebar ul li a:hover {
     color: #ffdd57;
-  }
-  
-  /* Main Content Styles */
-  .main-content {
+}
+
+/* Main Content Styles */
+.main-content {
     margin-left: 250px;
     padding: 20px;
     width: calc(100% - 250px);
     overflow-y: auto;
-  }
-  
-  /* Section Styles */
-  section {
+}
+
+/* Section Styles */
+section {
     min-height: 100vh;
     margin: 20px 0;
     padding: 50px 20px;
@@ -95,22 +96,22 @@ body {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: white; /* Ensure text is visible on the gradient background */
-  }
-  
-  section:hover {
+}
+
+section:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  h2 {
+}
+
+h2 {
     color: white; /* White text for headings */
     font-size: 2.5rem;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
-  }
-  
-  h2::after {
+}
+
+h2::after {
     content: '';
     width: 50%;
     height: 3px;
@@ -119,45 +120,45 @@ body {
     bottom: -10px;
     left: 25%;
     border-radius: 2px;
-  }
-  
-  /* Home Section */
-  #home {
+}
+
+/* Home Section */
+#home {
     background: linear-gradient(135deg, #0b3941, #20b4ce); /* Gradient background */
     color: white;
     text-align: center;
     padding: 100px 20px;
-  }
-  
-  #home h2 {
+}
+
+#home h2 {
     font-size: 3rem;
     margin-bottom: 10px;
-  }
-  
-  #home p {
+}
+
+#home p {
     font-size: 1.5rem;
     margin-top: 10px;
-  }
-  
-  /* About Me Section */
-  #bio {
+}
+
+/* About Me Section */
+#bio {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
     padding: 60px 20px;
     background: linear-gradient(135deg, #0b3941, #20b4ce); /* Gradient background */
-  }
-  
-  .bio-content {
+}
+
+.bio-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     width: 100%;
-  }
-  
-  .bio-image img {
+}
+
+.bio-image img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -165,42 +166,44 @@ body {
     border: 4px solid #ffdd57; /* Yellow border for the image */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-  }
-  
-  .bio-image img:hover {
+    max-width: 100%; /* Added for responsiveness */
+    height: auto; /* Added for responsiveness */
+}
+
+.bio-image img:hover {
     transform: scale(1.1);
-  }
-  
-  .bio-text {
+}
+
+.bio-text {
     max-width: 600px;
     text-align: left;
-  }
-  
-  .bio-text h2 {
+}
+
+.bio-text h2 {
     font-size: 2.5rem;
     color: white; /* White text for headings */
     margin-bottom: 20px;
-  }
-  
-  .bio-text p {
+}
+
+.bio-text p {
     font-size: 1.1rem;
     color: #f0f0f0; /* Light gray text for readability */
     line-height: 1.8;
-  }
-  
-  /* Skills Section */
-  #skills {
+}
+
+/* Skills Section */
+#skills {
     background: linear-gradient(135deg, #0b3941, #20b4ce); /* Gradient background */
-  }
-  
-  #skills .skills-list {
+}
+
+#skills .skills-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-  }
-  
-  .skill-item {
+}
+
+.skill-item {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
@@ -211,29 +214,29 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, background 0.3s ease;
     color: white; /* White text for skills */
-  }
-  
-  .skill-item:hover {
+}
+
+.skill-item:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.2); /* Lighter background on hover */
-  }
-  
-  .tech-logo {
+}
+
+.tech-logo {
     width: 30px;
     height: 30px;
     transition: transform 0.3s ease;
-  }
-  
-  .skill-item:hover .tech-logo {
+}
+
+.skill-item:hover .tech-logo {
     transform: scale(1.2);
-  }
-  
-  /* Projects Section */
-  #projects {
+}
+
+/* Projects Section */
+#projects {
     background: linear-gradient(135deg, #0b3941, #20b4ce); /* Gradient background */
-  }
-  
-  #projects .projects-list {
+}
+
+#projects .projects-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -241,9 +244,9 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .project-item {
+}
+
+.project-item {
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
     border-radius: 10px;
     padding: 20px;
@@ -254,37 +257,39 @@ body {
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: white; /* White text for projects */
-  }
-  
-  .project-item:hover {
+}
+
+.project-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .project-logo {
+}
+
+.project-logo {
     width: 60px;
     height: 60px;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
-  }
-  
-  .project-item:hover .project-logo {
+    max-width: 100%; /* Added for responsiveness */
+    height: auto; /* Added for responsiveness */
+}
+
+.project-item:hover .project-logo {
     transform: scale(1.2);
-  }
-  
-  .project-item p {
+}
+
+.project-item p {
     font-size: 1.2rem;
     font-weight: bold;
     margin: 0;
     color: white; /* White text for project names */
-  }
-  
-  /* Experience Section */
-  #experience {
+}
+
+/* Experience Section */
+#experience {
     background: linear-gradient(135deg, #0b3941, #20b4ce); /* Gradient background */
-  }
-  
-  .experience-item {
+}
+
+.experience-item {
     margin-bottom: 30px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
@@ -292,62 +297,62 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: white; /* White text for experience */
-  }
-  
-  .experience-item:hover {
+}
+
+.experience-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .experience-item h3 {
+}
+
+.experience-item h3 {
     font-size: 1.5rem;
     color: white; /* White text for headings */
     margin-bottom: 10px;
-  }
-  
-  .experience-item p {
+}
+
+.experience-item p {
     font-size: 1rem;
     color: #f0f0f0; /* Light gray text for readability */
-  }
-  
-  /* Contact Section */
-  #contact {
+}
+
+/* Contact Section */
+#contact {
     background: linear-gradient(135deg, #0b3941, #20b4ce); /* Gradient background */
     color: white;
     padding: 60px 20px;
-  }
-  
-  #contact h2 {
+}
+
+#contact h2 {
     color: white;
-  }
-  
-  form {
+}
+
+form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     max-width: 600px;
     margin: 0 auto;
-  }
-  
-  form label {
+}
+
+form label {
     font-size: 1.1rem;
     color: white;
-  }
-  
-  form input, form textarea {
+}
+
+form input, form textarea {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
     color: white;
-  }
-  
-  form input::placeholder, form textarea::placeholder {
+}
+
+form input::placeholder, form textarea::placeholder {
     color: #ccc;
-  }
-  
-  form button {
+}
+
+form button {
     padding: 10px;
     background: #ffdd57;
     color: #0b3941;
@@ -356,78 +361,84 @@ body {
     font-size: 1.1rem;
     cursor: pointer;
     transition: background 0.3s ease;
-  }
-  
-  form button:hover {
+}
+
+form button:hover {
     background: #ffc107;
-  }
-  
-  /* Footer Styles */
-  footer {
+}
+
+/* Footer Styles */
+footer {
     text-align: center;
     padding: 20px;
     background: #0b3941;
     color: white;
     margin-top: auto;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-      padding: 10px;
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
     }
-  
+
     .main-content {
-      margin-left: 0;
-      width: 100%;
+        margin-left: 0;
+        width: 100%;
     }
-  
+
     .bio-content {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
-  
+
     .bio-image img {
-      margin-bottom: 20px;
+        margin-bottom: 20px;
     }
-  
+
     .skills-list, .projects-list {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  }
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Adjust space between items */
-  }
-  
-  .skill-item {
-    flex: 1 1 calc(50% - 20px); /* Each item takes 50% width minus the gap */
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between icon and text */
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .social-links {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .social-links a {
-    display: inline-block;
-    margin: 10px; /* Adds space between icons */
-    font-size: 32px; /* Increases icon size */
-    color: white;
-    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-  }
-  
-  .social-links a:hover {
-    color: #0a66c2; /* LinkedIn Blue */
-    transform: scale(1.2); /* Slight zoom effect on hover */
-  }
-  
+}
+
+/* Additional responsive styles for smaller devices */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    #home h2 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+
+    .sidebar ul li a {
+        font-size: 16px;
+    }
+
+    .skill-item {
+        flex: 1 1 100%;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .project-item p {
+        font-size: 1rem;
+    }
+
+    form input, form textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
